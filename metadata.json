@@ -1,0 +1,5 @@
+{
+  "name": "EnergyFlow",
+  "description": "A mobile-first, canvas-based educational platform visualizing energy transfer and transformation without complex physics formulas.",
+  "requestFramePermissions": []
+}
