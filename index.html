@@ -2,11 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- Mobile-safe viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
     <title>EnergyFlow Simulations</title>
-
-    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -31,27 +28,22 @@
               sans: ['Inter', 'system-ui', 'sans-serif'],
             },
             boxShadow: {
-              glow: '0 0 15px rgba(14, 165, 233, 0.3)',
+              'glow': '0 0 15px rgba(14, 165, 233, 0.3)',
               'glow-active': '0 0 20px rgba(14, 165, 233, 0.5)',
             }
           }
         }
       }
     </script>
-
-    <!-- Safe Area & Body Styling -->
     <style>
-      html, body {
-        margin: 0;
-        padding: 0;
-        min-height: 100%;
+      body {
         overscroll-behavior: none;
         touch-action: manipulation;
         -webkit-tap-highlight-color: transparent;
         user-select: none;
         -webkit-user-select: none;
       }
-
+      
       /* Safe Area Utilities */
       .pb-safe {
         padding-bottom: env(safe-area-inset-bottom, 20px);
@@ -60,8 +52,7 @@
         padding-top: env(safe-area-inset-top, 20px);
       }
     </style>
-
-    <script type="importmap">
+  <script type="importmap">
 {
   "imports": {
     "react/": "https://esm.sh/react@^19.2.3/",
@@ -73,15 +64,10 @@
   }
 }
 </script>
-
-    <link rel="stylesheet" href="/index.css">
-  </head>
-
-  <body class="bg-slate-950 text-slate-100 flex flex-col min-h-screen w-full">
-    <!-- Root Container -->
-    <div id="root" class="flex-1 flex flex-col min-h-screen pb-safe pt-safe overflow-auto"></div>
-
-    <!-- Entry Script -->
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-slate-950 text-slate-100 h-screen w-screen overflow-hidden flex flex-col">
+    <div id="root" class="flex-1 flex flex-col h-full overflow-hidden"></div>
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>
